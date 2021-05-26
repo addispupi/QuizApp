@@ -1,21 +1,23 @@
 import 'package:flutter/material.dart';
 
+import './question.dart';
+
 void main() => runApp(QuizApp());
 
 class QuizApp extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return QuizAppState();
+    return _QuizAppState();
   }
 }
 
-class QuizAppState extends State<QuizApp> {
-  var questionIndex = 0;
+class _QuizAppState extends State<QuizApp> {
+  var _questionIndex = 0;
   void answerQuestion() {
     setState(() {
-      questionIndex += 1;
+      _questionIndex += 1;
     });
-    print(questionIndex);
+    print(_questionIndex);
   }
 
   @override
@@ -25,11 +27,12 @@ class QuizAppState extends State<QuizApp> {
       'What\'s your favorite animal?'
     ];
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(title: Text('መልመጃ ደብተር')),
         body: Column(
           children: [
-            Text(questions[questionIndex]),
+            Question(questions[_questionIndex]),
             ElevatedButton(child: Text('Answer 1'), onPressed: answerQuestion),
             ElevatedButton(
                 child: Text('Answer 2'),
