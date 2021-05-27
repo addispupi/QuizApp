@@ -1,6 +1,6 @@
 # quiz_app
 
-A new Flutter application.
+A Computer Science subjects/question excercise application.
 
 ## Getting Started
 
