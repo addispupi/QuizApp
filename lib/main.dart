@@ -24,7 +24,9 @@ class _QuizAppState extends State<QuizApp> {
   Widget build(BuildContext context) {
     var questions = [
       'What\'s your favorite color?',
-      'What\'s your favorite animal?'
+      'What\'s your favorite animal?',
+      'What\'s the capital city of Ethiopia?',
+      'The three primary colors prespectively are'
     ];
     return MaterialApp(
       debugShowCheckedModeBanner: false,
@@ -35,7 +37,7 @@ class _QuizAppState extends State<QuizApp> {
             Question(questions[_questionIndex]),
             ElevatedButton(child: Text('Answer 1'), onPressed: answerQuestion),
             ElevatedButton(
-                child: Text('Answer 2'),
+                child: Text('Answer 3'),
                 onPressed: () => print('answer 2 choosen')),
             ElevatedButton(
                 child: Text('Answer 3'),
